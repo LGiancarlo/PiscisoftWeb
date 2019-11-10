@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./CSS/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     function EatCookie() {
       document.cookie = "Login=; expires= Thu, 01 Jan 1970 00:00:00 UTC; path=/";
       window.location.href = "https://piscisoft.firebaseapp.com";
@@ -28,7 +28,7 @@
       }
     }
     window.onload = Verify;
-  </script>
+  </script> -->
   <title>Usuarios</title>
 </head>
 
@@ -72,7 +72,8 @@
     <div class="control-group" id="cab_filtrado">
       <label class="control-label">Buscar alumno por código:</label>
       <input type="text" id="texto" placeholder="" class="input-xlarge" onkeyup="buscarTiempoReal()">
-      <button class="btn btn-primary float-right btn-lg" onclick="generarPaginacion()"> Ver listado </button>
+      <button id="verListado "class="btn btn-primary float-right btn-lg  mx-1" onclick="generarPaginacion()"> Ver listado </button>
+      <button id="actualizarAsistencia" class="btn btn-secondary float-right btn-lg mx-1" onclick="actualizarAsistencia()"> Actualizar asistencia </button>
       <br>
       <br>
     </div>
@@ -152,7 +153,22 @@
   <br>
   <br>
   <br>
-
+  <div class="container">
+    <div class="modal fade" id="ventanaActualizado" role="dialog">
+            <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                            <div class="modal-header">
+                                    <h4 class="modal-title">Información</h4>
+                                    <button type="button" class="close"
+                                            data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              <p id="mensajeActualizar"></p>
+                          </div>
+                    </div>
+            </div>
+    </div>
+</div>
   <!-- <div class="container ">
     <footer class="footer-bs">
       <div class="row">
