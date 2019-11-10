@@ -38,7 +38,7 @@ Fecha = function (fecha, diaSemana) {
             mes = "0" + mes
         if (dia < 10)
             dia = "0" + dia
-        let formatoFechaOr = dia + "-" + mes
+        let formatoFechaOr = dia + "/" + mes
         return formatoFechaOr
     }
 

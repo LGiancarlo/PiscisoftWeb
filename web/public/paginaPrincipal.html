@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Pagina principal</title>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function EatCookie() {
             document.cookie = "Login=; expires= Thu, 01 Jan 1970 00:00:00 UTC; path=/";
             window.location.href = "https://piscisoft.firebaseapp.com";
@@ -28,7 +28,7 @@
             }
         }
         window.onload = Verify;
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -83,276 +83,131 @@
         </tr>
         <tr>
             <td class="primeraColumna"> 05:30 - 06:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=5:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=5:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=5:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=5:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=5:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td class="horarioCerrado"></td>
+            <td id="Lunes-5:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=5:30'"></td>
+            <td id="Martes-5:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=5:30'"></td>
+            <td id="Miercoles-5:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=5:30'"></td>
+            <td id="Jueves-5:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=5:30'"></td>
+            <td id="Viernes-5:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=5:30'"></td>
+            <td id="Sabado-5:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=5:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 06:30 - 07:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=6:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=6:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=6:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=6:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=6:30'"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=6:30'"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-6:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=6:30'"></td>
+            <td id="Martes-6:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=6:30'"></td>
+            <td id="Miercoles-6:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=6:30'"></td>
+            <td id="Jueves-6:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=6:30'"></td>
+            <td id="Viernes-6:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=6:30'"></td>
+            <td id="Sabado-6:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=6:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 07:30 - 08:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','7:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','7:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Miercoles','7:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','7:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','7:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Sabado','7:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-7:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=7:30'"></td>
+            <td id="Martes-7:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=7:30'"></td>
+            <td id="Miercoles-7:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=7:30'"></td>
+            <td id="Jueves-7:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=7:30'"></td>
+            <td id="Viernes-7:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=7:30'"></td>
+            <td id="Sabado-7:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=7:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 08:30 - 09:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','8:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','8:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Miercoles','8:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','8:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','8:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Sabado','8:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-8:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=8:30'"></td>
+            <td id="Martes-8:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=8:30'"></td>
+            <td id="Miercoles-8:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=8:30'"></td>
+            <td id="Jueves-8:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=8:30'"></td>
+            <td id="Viernes-8:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=8:30'"></td>
+            <td id="Sabado-8:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=8:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 09:30 - 10:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','9:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','9:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Miercoles','9:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','9:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','9:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Sabado','9:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-9:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=9:30'"></td>
+            <td id="Martes-9:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=9:30'"></td>
+            <td id="Miercoles-9:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=9:30'"></td>
+            <td id="Jueves-9:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=9:30'"></td>
+            <td id="Viernes-9:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=9:30'"></td>
+            <td id="Sabado-9:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=9:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 10:30 - 11:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','10:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','10:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda"
-                    onclick="abrirDetalle('Miercoles','10:30')" value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','10:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','10:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Sabado','10:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-10:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=10:30'"></td>
+            <td id="Martes-10:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=10:30'"></td>
+            <td id="Miercoles-10:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=10:30'"></td>
+            <td id="Jueves-10:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=10:30'"></td>
+            <td id="Viernes-10:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=10:30'"></td>
+            <td id="Sabado-10:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=10:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 11:30 - 12:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','11:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','11:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda"
-                    onclick="abrirDetalle('Miercoles','11:30')" value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','11:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','11:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Sabado','11:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-11:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=11:30'"></td>
+            <td id="Martes-11:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=11:30'"></td>
+            <td id="Miercoles-11:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=11:30'"></td>
+            <td id="Jueves-11:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=11:30'"></td>
+            <td id="Viernes-11:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=11:30'"></td>
+            <td id="Sabado-11:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=11:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 12:30 - 13:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','12:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','12:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda"
-                    onclick="abrirDetalle('Miercoles','12:30')" value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','12:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','12:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Sabado','12:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-12:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=12:30'"></td>
+            <td id="Martes-12:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=12:30'"></td>
+            <td id="Miercoles-12:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=12:30'"></td>
+            <td id="Jueves-12:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=12:30'"></td>
+            <td id="Viernes-12:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=12:30'"></td>
+            <td id="Sabado-12:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Sabado&hora=12:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 13:30 - 14:15 </td>
-            <td class="horarioCerrado"></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','13:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','13:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td class="horarioCerrado"></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','13:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-13:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=13:30'"></td>
+            <td id="Martes-13:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=13:30'"></td>
+            <td id="Miercoles-13:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=13:30'"></td>
+            <td id="Jueves-13:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=13:30'"></td>
+            <td id="Viernes-13:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=13:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 14:30 - 15:15 </td>
-            <td class="horarioCerrado"></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','14:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','14:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td class="horarioCerrado"></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','14:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-14:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=14:30'"></td>
+            <td id="Martes-14:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=14:30'"></td>
+            <td id="Miercoles-14:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=14:30'"></td>
+            <td id="Jueves-14:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=14:30'"></td>
+            <td id="Viernes-14:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=14:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 15:30 - 16:15 </td>
-            <td class="horarioCerrado"></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetall('Martes','15:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','15:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td class="horarioCerrado"></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','15:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-15:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=15:30'"></td>
+            <td id="Martes-15:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=15:30'"></td>
+            <td id="Miercoles-15:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=15:30'"></td>
+            <td id="Jueves-15:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=15:30'"></td>
+            <td id="Viernes-15:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=15:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 16:30 - 17:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','16:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','16:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda"
-                    onclick="abrirDetalle('Miercoles','16:30')" value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','16:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','16:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-16:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=16:30'"></td>
+            <td id="Martes-16:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=16:30'"></td>
+            <td id="Miercoles-16:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=16:30'"></td>
+            <td id="Jueves-16:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=16:30'"></td>
+            <td id="Viernes-16:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=16:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 17:30 - 18:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','17:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','17:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda"
-                    onclick="abrirDetalle('Miercoles','17:30')" value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','17:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','17:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-17:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=17:30'"></td>
+            <td id="Martes-17:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=17:30'"></td>
+            <td id="Miercoles-17:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=17:30'"></td>
+            <td id="Jueves-17:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=17:30'"></td>
+            <td id="Viernes-17:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=17:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 18:30 - 19:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','18:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','18:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda"
-                    onclick="abrirDetalle('Miercoles','18:30')" value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','18:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','18:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-18:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=18:30'"></td>
+            <td id="Martes-18:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=18:30'"></td>
+            <td id="Miercoles-18:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=18:30'"></td>
+            <td id="Jueves-18:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=18:30'"></td>
+            <td id="Viernes-18:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=18:30'"></td>
         </tr>
         <tr>
             <td class="primeraColumna"> 19:30 - 20:15 </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Lunes','19:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Martes','19:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Miercoles','19:30')"
-                    value="Modify">Boton</button></td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Jueves','19:30')"
-                    value="Modify">Boton</button>
-            </td>
-            <td><button type="button" class="btn btn-link botonDentroDeCelda" onclick="abrirDetalle('Viernes','19:30')"
-                    value="Modify">Boton</button>
-            </td>
+            <td id="Lunes-19:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Lunes&hora=19:30'"></td>
+            <td id="Martes-19:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Martes&hora=19:30'"></td>
+            <td id="Miercoles-19:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Miercoles&hora=19:30'"></td>
+            <td id="Jueves-19:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Jueves&hora=19:30'"></td>
+            <td id="Viernes-19:30" class="celdaTabla" onclick="location.href='./paginaPrincipalDetalle.html?dia=Viernes&hora=19:30'"></td>
         </tr>
     </table>
     <br>

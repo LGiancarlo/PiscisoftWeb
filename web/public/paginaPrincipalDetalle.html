@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./CSS/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function EatCookie() {
             document.cookie = "Login=; expires= Thu, 01 Jan 1970 00:00:00 UTC; path=/";
             window.location.href = "https://piscisoft.firebaseapp.com";
@@ -27,7 +27,7 @@
             }
         }
         window.onload = Verify;
-    </script>
+    </script> -->
     <title> Detalle de Turno </title>
 </head>
 
@@ -68,23 +68,24 @@
     <br>
     <br>
     <div class="container">
-        <h3> Detalle del turno : </h3>
-        <table class="table table-bordered my-3" style="text-align:center; width: 80%; margin: 0px auto;"
-            id="tablaUsuarios">
-            <th class="cabecera" colspan="3">Capacidad Restante: <a id="capacidad"></a></th>
-            <tr>
-                <th scope="col" class="primeraFila">Foto</th>
-                <th scope="col" class="primeraFila">Datos</th>
-                <th scope="col" class="primeraFila">Asistencia</th>
-            </tr>
-
-            <tr>
-                <td valign="middle" style='vertical-align:middle'><img src='./imagenes/foto_en_blanco.png' width=109
-                        height=123>
-                </td>
-                <td style='vertical-align:middle '>Nombre Completo</td>
-                <td style='vertical-align:middle '>Si</td>
-            </tr>
+        <h3 id="datosTurno"> Detalle del turno : </h3>
+        <table class="table table-bordered my-3" style="text-align:center; width: 80%; margin: 0px auto;">
+            <thead>
+                <th class="cabecera" colspan="3">Capacidad Restante: <a id="capacidad"></a></th>
+                <tr>
+                    <th scope="col" class="primeraFila">Foto</th>
+                    <th scope="col" class="primeraFila">Datos</th>
+                    <th scope="col" class="primeraFila">Asistencia</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios"> 
+                <tr>
+                    <td valign="middle" style='vertical-align:middle'><img src='./imagenes/foto_en_blanco.png' width=109
+                            height=123></td>
+                    <td style='vertical-align:middle '></td>
+                    <td style='vertical-align:middle '></td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <br>
