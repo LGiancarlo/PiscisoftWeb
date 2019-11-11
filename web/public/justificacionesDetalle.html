@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="">
-    <link rel="stylesheet" type="text/css" href="./CSS/tablaScroll.css">
     <link rel="stylesheet" type="text/css" href="./CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/justificacionesDetalle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     function getCookie(name) {
       var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
       return v ? v[2] : null;
@@ -21,7 +21,7 @@
       }
     }
     window.onload = Verify;
-  </script>
+  </script> -->
     <title> Detalle de Justificación </title>
 </head>
 
@@ -62,44 +62,54 @@
     <br>
     <br>
     <div class="container center">
-        <h3> Procesar justificación: Ricardo Martin Rodriguez Rodas</h3>
+        <h3 id="nombreUsuarioJusti"> Procesar justificación: </h3>
     </div>
     <div class="row">
         <div class="col-md-4 offset-md-2">
             <br>
             <h5> Información General de solicitud</h5>
             <br>
-            <p align="left"> <strong> Código </strong> : </p>
-            <p align="left"> <strong> Turno </strong> : </p>
+            <p align="left" id="codigoUsuarioJusti"> <strong> Código </strong> : </p>
+            <p align="left" id="turnoReserva"> <strong> Turno </strong> : </p>
             <br>
-            <br>
+
             <div class="form-group">
-                <p align="left"> <strong> Descripción </strong> : </p>
-                <textarea class="form-control" id="comentario" rows="3"></textarea>
+                <p align="left"> <strong> Motivo </strong> : </p>
+                <textarea class="form-control" id="comentarioJustificacion" rows="3" readonly="readonly"></textarea>
             </div>
             <br>
             <p align="left"> <strong> Archivo </strong> : </p>
+            <a id="urlJusti">justificacion</a>
         </div>
         <div class="col-md-4">
             <br>
             <h5> Procesar solicitud</h5>
             <br>
             <p align="left"> <strong> Procede </strong> : </p>
-            <form action="/">
+
             <div class="form-check">
                 <label class="form-check-label" for="radio1">
-                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Si
+                    <input type="radio" class="form-check-input" id="radio1" name="radioDecision" value="Validada"
+                        checked>Si
                 </label>
             </div>
             <div class="form-check">
                 <label class="form-check-label" for="radio2">
-                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">No
+                    <input type="radio" class="form-check-input" id="radio2" name="radioDecision" value="No validada">No
                 </label>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary float-right btn-lg" style="background: #FC663D; margin: 15px">Enviar</button>
-            <button type="submit" class="btn btn-primary float-right btn-lg" style="background: #B4B4B4; margin: 15px">Regresar</button>
-            </form>
+            <div class="form-group">
+                <p align="left"> <strong> Observación </strong> : </p>
+                <textarea class="form-control" id="comentarioObservacion" rows="2"></textarea>
+                <p align="right" class="mensajeError" id="mensajeFaltaObs"> </p>
+            </div>
+            <br>
+            <button class="btn btn-primary float-right btn-lg" style="background: #FC663D; margin: 15px"
+                id="envJust">Enviar</button>
+            <button class="btn btn-primary float-right btn-lg" style="background: #B4B4B4; margin: 15px"
+                onclick="window.location.href='./justificaciones.html'">Regresar</button>
+
         </div>
     </div>
     </div>
@@ -130,6 +140,46 @@
             </div>
         </footer>
     </div>
+
+    <div class="container">
+        <div class="modal fade" id="ventanaGuardadoExitoso" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Información</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-body"> Mensaje enviado correctamente</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" style="background: #FC663D; margin: 0 auto"
+                            onclick="window.location.href='./justificaciones.html'">
+                            Continuar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="modal fade" id="ventanaGuardadoFallido" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Información</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-body" id="infoConf"> No se envio, intentelo mas tarde
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -143,7 +193,9 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
     <script type="text/javascript" src="./Javascript/ConexionFirebase/conexion.js"></script>
-    <script type="text/javascript" src="./Javascript/usuariosDetalle.js"></script>
+    <script type="text/javascript" src="./Javascript/Modificadores/obtenerDatosURL.js"></script>
+    <script type="text/javascript" src="./Javascript/ClasesFirebase/JustificacionWeb.js"></script>
+    <script type="text/javascript" src="./Javascript/justificacionesDetalle.js"></script>
 </body>
 
 </html>
