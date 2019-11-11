@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./CSS/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     function EatCookie() {
       document.cookie = "Login=; expires= Thu, 01 Jan 1970 00:00:00 UTC; path=/";
       window.location.href = "https://piscisoft.firebaseapp.com";
@@ -28,7 +28,7 @@
       }
     }
     window.onload = Verify;
-  </script>
+  </script> -->
   <title>Justificaciones</title>
 </head>
 
@@ -68,27 +68,21 @@
   <br>
   <br>
   <div class="container">
-    <table class="table table-bordered my-3" style="text-align:center; width: 80%; margin: 0px auto;" id="tablaUsuarios">
-
-      <tr>
-        <th scope="col" class="primeraFila">Fecha de envio</th>
-        <th scope="col" class="primeraFila">Nombre Completo</th>
-        <th scope="col" class="primeraFila">Justificación</th>
-        <th scope="col" class="primeraFila">Procede</th>
-      </tr>
-
+    <table class="table table-bordered my-3" style="text-align:center; width: 80%; margin: 0px auto;">
+      <thead>
+        <tr>
+          <th scope="col" class="primeraFila">Fecha de envio</th>
+          <th scope="col" class="primeraFila">Información</th>
+          <th scope="col" class="primeraFila">Cant. Inasistencias</th>
+          <th scope="col" class="primeraFila">Justificación</th>
+        </tr>
+      </thead>
       <!-- Se genera la tabla -->
+      <tbody id="tablaJustificacion">
+        <tr>
 
-      <tr>
-        <th scope='row' class="celdaInicial">Fecha</th>
-        <td class="celdaInicial">Nombre Completo</td>
-        <td class="celdaInicial">
-            <button class="btn btn-info botonNaranja"> Justificacion</button>
-        </td>
-        <td class="celdaInicial">Procede</td>
-        
-        </td>
-      </tr>
+        </tr>
+        </thead>
     </table>
   </div>
   <br>
@@ -119,6 +113,7 @@
       </div>
     </footer>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -132,6 +127,7 @@
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
   <script type="text/javascript" src="./Javascript/ConexionFirebase/conexion.js"></script>
+  <script type="text/javascript" src="./Javascript/justificaciones.js"></script>
 </body>
 
 </html>
