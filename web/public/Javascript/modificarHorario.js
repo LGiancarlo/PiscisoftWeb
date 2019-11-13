@@ -59,6 +59,8 @@ function habilitar() {
     let listaDesplegableProfesores = document.getElementById("profesores")
     let listaDesplegableEstado = document.getElementById("estado")
     let estado = listaDesplegableEstado.options[listaDesplegableEstado.selectedIndex].value;
+    let hab1;
+    let hab2;
     if (estado == "Cerrado") {
         hab1 = true
         hab2 = false
@@ -75,11 +77,11 @@ function habilitar() {
 
 
 function generadorTurnos() { //Solo esta generando para la siguiente semana
-    diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
-    for (var i = 0; i < diasSemana.length; i++) {
+    let diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
+    for (let j = 0; j < diasSemana.length; j++) {
         let suma = hoy.getTime() + semanaEnMilisegundos * 1;
         let fechaDentroDeUnaSemana = new Date(suma);
-        let nuevosTurnos = new Fecha(fechaDentroDeUnaSemana, diasSemana[i])
+        let nuevosTurnos = new Fecha(fechaDentroDeUnaSemana, diasSemana[j])
         nuevosTurnos.generarFormatoFechaBD()
         nuevosTurnos.generarTurno()
     }

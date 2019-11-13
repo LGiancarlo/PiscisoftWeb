@@ -3,11 +3,6 @@ let identificacionFecha = obtenerParametros()
 let hoy = new Date()
 
 
-let semanaEnMilisegundos = 1000 * 60 * 60 * 24   //Prueba
-
-
-let suma = hoy.getTime() + semanaEnMilisegundos * 2; //Prueba
-hoy = new Date(suma);  //Prueba
 
 let fecha = new Fecha(hoy, identificacionFecha.dia)
 let cap = document.getElementById("capacidad")

@@ -1,4 +1,4 @@
-TurnoWeb = function (dia, hora) {
+var TurnoWeb = function (dia, hora) {
     this.dia = dia
     this.hora = hora
     this.fechaElegida = generarFecha(dia)
@@ -59,7 +59,7 @@ TurnoWeb = function (dia, hora) {
     }
 
     this.guardarObservacion = function (observacion) {
-        
+
         let etiquetaValidador = document.getElementById("validador")
         db.collection('turno').doc(this.fechaElegida.generarFormatoFechaBD() + "." + hora).update(
             {
@@ -73,17 +73,17 @@ TurnoWeb = function (dia, hora) {
 
 
 
-    this.guardarTodoCambios = function (nuevaCapacidad,nuevoProfesor,nuevoEstado,observacion) {
+    this.guardarTodoCambios = function (nuevaCapacidad, nuevoProfesor, nuevoEstado, observacion) {
         this.guardarCambioProfesor(nuevoProfesor)
         this.guardarCambioCapacidad(nuevaCapacidad)
         this.guardarObservacion(observacion)
         this.cambiarTurno(nuevoEstado)
-        if (true) {
-            document.getElementById("ventanaCambios").style.display = "none";
-            $(document).ready(function () {
-                $("#ventanaGuardado").modal("show");
-            });
-            pintarTabla()
-        }
+
+        document.getElementById("ventanaCambios").style.display = "none";
+        $(document).ready(function () {
+            $("#ventanaGuardado").modal("show");
+        });
+        pintarTabla()
+
     }
 }

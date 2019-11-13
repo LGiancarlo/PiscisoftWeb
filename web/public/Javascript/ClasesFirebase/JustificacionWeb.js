@@ -1,4 +1,4 @@
-JustificacionWeb = function (numeroReserva) {
+var JustificacionWeb = function (numeroReserva) {
 
     this.NReserva = numeroReserva
     let codJustificacion;
@@ -15,8 +15,8 @@ JustificacionWeb = function (numeroReserva) {
                         codUsuario = usuario.id
                         cantInasistencia = usuario.data().inasistencias
                         db.collection("turno").doc(`${reserva.data().codTurno}`).get().then(
-                            usuario => {
-                                objetosWeb.turno.innerHTML += `${usuario.data().fecha} ${usuario.data().horaInicio}- ${usuario.data().horaFin}`
+                            turno => {
+                                objetosWeb.turno.innerHTML += `${turno.data().fecha} ${turno.data().horaInicio}- ${turno.data().horaFin}`
                             })
                         db.collection("justificacion").where("codReserva", "==", reserva.id).get().then(
                             function (querySnapshot) {
@@ -54,8 +54,16 @@ JustificacionWeb = function (numeroReserva) {
                 db.collection("usuario").doc(codUsuario).update({
                     inasistencias: parseInt(nuevaInasistencia)
                 }).then(function () {
+                    db.collection("usuario").doc(codUsuario).get().then(function(usu) {
+                        if (usu.data().inasistencias==3) {
+                            db.collection("usuario").doc(codUsuario).update({
+                                estado: "Suspendido"
+                            })
+                        } 
+                    })
                     $("#ventanaGuardadoExitoso").modal("show");
                     objetosWeb.boton.disabled=true
+                    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa")
                 }).catch(function (error) {
                     $(document).ready(function () {
                         $("#ventanaGuardadoFallido").modal("show");

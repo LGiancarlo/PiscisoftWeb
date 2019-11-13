@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./CSS/justificacionesDetalle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
     function getCookie(name) {
       var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
       return v ? v[2] : null;
@@ -21,7 +22,7 @@
       }
     }
     window.onload = Verify;
-  </script> -->
+  </script>
     <title> Detalle de Justificación </title>
 </head>
 
@@ -69,23 +70,23 @@
             <br>
             <h5> Información General de solicitud</h5>
             <br>
-            <p align="left" id="codigoUsuarioJusti"> <strong> Código </strong> : </p>
-            <p align="left" id="turnoReserva"> <strong> Turno </strong> : </p>
+            <p id="codigoUsuarioJusti"> <strong> Código </strong> : </p>
+            <p id="turnoReserva"> <strong> Turno </strong> : </p>
             <br>
 
             <div class="form-group">
-                <p align="left"> <strong> Motivo </strong> : </p>
+                <p > <strong> Motivo </strong> : </p>
                 <textarea class="form-control" id="comentarioJustificacion" rows="3" readonly="readonly"></textarea>
             </div>
             <br>
-            <p align="left"> <strong> Archivo </strong> : </p>
+            <p> <strong> Archivo </strong> : </p>
             <a id="urlJusti">justificacion</a>
         </div>
         <div class="col-md-4">
             <br>
             <h5> Procesar solicitud</h5>
             <br>
-            <p align="left"> <strong> Procede </strong> : </p>
+            <p> <strong> Procede </strong> : </p>
 
             <div class="form-check">
                 <label class="form-check-label" for="radio1">
@@ -100,9 +101,9 @@
             </div>
             <br>
             <div class="form-group">
-                <p align="left"> <strong> Observación </strong> : </p>
+                <p> <strong> Observación </strong> : </p>
                 <textarea class="form-control" id="comentarioObservacion" rows="2"></textarea>
-                <p align="right" class="mensajeError" id="mensajeFaltaObs"> </p>
+                <p class="mensajeError" id="mensajeFaltaObs"> </p>
             </div>
             <br>
             <button class="btn btn-primary float-right btn-lg" style="background: #FC663D; margin: 15px"

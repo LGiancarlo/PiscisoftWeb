@@ -29,7 +29,7 @@ justificacion.mostrarDetalleJustificacion(objetosWeb)
 document.getElementById("envJust").onclick = function () {
     let decisionAlternativas = document.getElementsByName('radioDecision');
     let decision = ""
-    for (i = 0; i < decisionAlternativas.length; i++) {
+    for (let i = 0; i < decisionAlternativas.length; i++) {
         if (decisionAlternativas[i].checked) {
             decision = decisionAlternativas[i].value
         }

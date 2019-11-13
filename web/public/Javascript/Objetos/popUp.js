@@ -1,4 +1,4 @@
-PopUpModificarUsuario = function (dia, hora) {
+var PopUpModificarUsuario = function (dia, hora) {
     this.mostrarDatosenPopUp = function () {
         let tituloPop = document.getElementById("tituloPop")
         let capacidad = document.getElementById("capacidad")
@@ -7,7 +7,7 @@ PopUpModificarUsuario = function (dia, hora) {
         let datosEstado = document.getElementById("estado")
 
 
-        valoresEstado = ["Abierto", "Cerrado"]
+        let valoresEstado = ["Abierto", "Cerrado"]
 
         datosEstado.innerHTML = ""
         datosProfesor.innerHTML = ""
