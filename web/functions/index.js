@@ -73,3 +73,13 @@ exports.PruebarReferencia = functions.https.onRequest((req,res) => {
         res.send('Hubo un error');
     })
 });
+
+exports.actualizarEstado = functions.firestore
+  .document('usuario/{userId}')
+  .onWrite((change, context) => { 
+        const data = change.after.data();
+        if (data.inasistencias != 3) return null;
+        return change.after.ref.update({
+            estado: "Suspendido"
+          });
+   });

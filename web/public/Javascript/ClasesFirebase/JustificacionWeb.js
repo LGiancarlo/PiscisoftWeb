@@ -54,16 +54,8 @@ var JustificacionWeb = function (numeroReserva) {
                 db.collection("usuario").doc(codUsuario).update({
                     inasistencias: parseInt(nuevaInasistencia)
                 }).then(function () {
-                    db.collection("usuario").doc(codUsuario).get().then(function(usu) {
-                        if (usu.data().inasistencias==3) {
-                            db.collection("usuario").doc(codUsuario).update({
-                                estado: "Suspendido"
-                            })
-                        } 
-                    })
                     $("#ventanaGuardadoExitoso").modal("show");
                     objetosWeb.boton.disabled=true
-                    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa")
                 }).catch(function (error) {
                     $(document).ready(function () {
                         $("#ventanaGuardadoFallido").modal("show");
