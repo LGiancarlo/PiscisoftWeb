@@ -1,6 +1,6 @@
 var store = firebase.firestore();
 
-Paginador = function (divPaginador, tabla, tamPagina) {
+var Paginador = function (divPaginador, tabla, tamPagina) {
     this.miDiv = divPaginador
     this.tabla = tabla
     this.tamPagina = tamPagina

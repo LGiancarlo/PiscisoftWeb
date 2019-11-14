@@ -25,8 +25,8 @@ function pintarTablaInicio() {
 pintarTablaInicio()
 
 function pintarTabla(){
-    celdasTabla=document.getElementsByClassName("celdaTabla");
-    for (i = 0; i < celdasTabla.length; i++) {
+    let celdasTabla=document.getElementsByClassName("celdaTabla");
+    for (let i = 0; i < celdasTabla.length; i++) {
         celdasTabla[i].style.backgroundColor = "#FFFFFF";
     }
     let valorlistaDesplegableFecha = datosFechas.value;

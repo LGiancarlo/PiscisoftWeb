@@ -4,7 +4,7 @@ var historyData = document.getElementById("TablaHistorial");
 
 
 
-identificacionPersona=obtenerParametros()
+let identificacionPersona=obtenerParametros()
 
 db.collection("usuario").doc(identificacionPersona.id).get().then(
     doc => {

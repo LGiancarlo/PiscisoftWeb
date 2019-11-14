@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +9,7 @@
   <link rel="stylesheet" href="./CSS/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     function EatCookie() {
       document.cookie = "Login=; expires= Thu, 01 Jan 1970 00:00:00 UTC; path=/";
       window.location.href = "https://piscisoft.firebaseapp.com";
@@ -28,7 +29,7 @@
       }
     }
     window.onload = Verify;
-  </script> -->
+  </script>
   <title>Usuarios</title>
 </head>
 
@@ -73,7 +74,7 @@
       <label class="control-label">Buscar alumno por código:</label>
       <input type="text" id="texto" placeholder="" class="input-xlarge" onkeyup="buscarTiempoReal()">
       <button id="verListado "class="btn btn-primary float-right btn-lg  mx-1" onclick="generarPaginacion()"> Ver listado </button>
-      <button id="actualizarAsistencia" class="btn btn-secondary float-right btn-lg mx-1" onclick="actualizarAsistencia()"> Actualizar asistencia </button>
+      <button id="actualizarAsistencia" class="btn btn-secondary float-right btn-lg mx-1" onclick="actualizarAsistencia()" > Actualizar asistencia </button>
       <br>
       <br>
     </div>
@@ -93,52 +94,7 @@
 
       <tr>
         <th scope='row' class='celdaInicial'>20169999</th>
-        <td valign="middle" class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123></td>
-        <td class='celdaInicial'>Nombre Completo</td>
-        <td class='celdaInicial'>Teléfono</td>
-        <td class='celdaInicial'>Observación</td>
-        <td class='celdaInicial'><button class="btn btn-default botonInicial"> Ver detalle</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope='row' class='celdaInicial'>20169999</th>
-        <td valign="middle" class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123></td>
-        <td class='celdaInicial'>Nombre Completo</td>
-        <td class='celdaInicial'>Teléfono</td>
-        <td class='celdaInicial'>Observación</td>
-        <td class='celdaInicial'><button class="btn btn-default botonInicial"> Ver detalle</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope='row' class='celdaInicial'>20169999</th>
-        <td valign="middle" class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123></td>
-        <td class='celdaInicial'>Nombre Completo</td>
-        <td class='celdaInicial'>Teléfono</td>
-        <td class='celdaInicial'>Observación</td>
-        <td class='celdaInicial'><button class="btn btn-default botonInicial"> Ver detalle</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope='row' class='celdaInicial'>20169999</th>
-        <td valign="middle" class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123></td>
-        <td class='celdaInicial'>Nombre Completo</td>
-        <td class='celdaInicial'>Teléfono</td>
-        <td class='celdaInicial'>Observación</td>
-        <td class='celdaInicial'><button class="btn btn-default botonInicial"> Ver detalle</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope='row' class='celdaInicial'>20169999</th>
-        <td valign="middle" class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123></td>
-        <td class='celdaInicial'>Nombre Completo</td>
-        <td class='celdaInicial'>Teléfono</td>
-        <td class='celdaInicial'>Observación</td>
-        <td style='vertical-align:middle'><button class="btn btn-default botonInicial"> Ver detalle</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope='row' class='celdaInicial'>20169999</th>
-        <td valign="middle" class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123></td>
+        <td class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123 alt="Foto usuario"></td>
         <td class='celdaInicial'>Nombre Completo</td>
         <td class='celdaInicial'>Teléfono</td>
         <td class='celdaInicial'>Observación</td>
@@ -169,27 +125,7 @@
             </div>
     </div>
 </div>
-  <!-- <div class="container ">
-    <footer class="footer-bs">
-      <div class="row">
-        <div class="col-md-6 footer-brand animated fadeInLeft">
-          <br>
-          <p>Av. Las Palmas 179 Urb. Mayorazgo</p>
-          <p>Distrito de Ate</p>
-          <p>Lima,Perú</p>
-          <p>© 2019 PisciSoft. Todos los derechos reservados</p>
-        </div>
-        <div class="col-md-6 footer-social animated fadeInRight ">
-          <ul>
-            <div class="card-header mx-auto ">
-              <span> <img src=".//imagenes//Logo%20en%20blanco.png" class="w-75" alt="Logo" style="float:right">
-              </span><br />
-            </div>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </div> -->
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

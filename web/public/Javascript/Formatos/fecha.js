@@ -1,4 +1,4 @@
-Fecha = function (fecha, diaSemana) {
+var Fecha = function (fecha, diaSemana) {
     this.diaSemana = diaSemana
     this.fechaSemana = fecha
     let unDiaAdicional = 1000 * 60 * 60 * 24
@@ -43,21 +43,18 @@ Fecha = function (fecha, diaSemana) {
     }
 
     this.generarTurno = function () {
-        horariosInicio = [ "5:30", "6:30", "7:30", "8:30", "9:30",
+        let horariosInicio = [ "5:30", "6:30", "7:30", "8:30", "9:30",
                         "10:30", "11:30", "12:30", "13:30", "14:30",
                         "15:30", "16:30", "17:30", "18:30", "19:30"] 
-        horariosFin = ["6:15", "7:15", "8:15", "9:15", "10:15",
+        let horariosFin = ["6:15", "7:15", "8:15", "9:15", "10:15",
                        "11:15", "12:15", "13:15", "14:15", "15:15",
                        "16:15", "17:15", "18:15", "19:15", "20:15"]   
         for (var j = 0; j < horariosInicio.length; j++) {
             let estado="Abierto"
             let observaciones = null
             let profesor = 100
-            if ((this.diaSemana == "Lunes" || this.diaSemana == "Miercoles") && j >= 8 && j <= 10) {
-                estado="Cerrado"
-                observaciones = "Mantenimiento"
-            }
-            else if (this.diaSemana == "Sabado" && j == 0) {
+            if (((this.diaSemana == "Lunes" || this.diaSemana == "Miercoles") && j >= 8 && j <= 10) ||
+                 (this.diaSemana == "Sabado" && j == 0)) {
                 estado="Cerrado"
                 observaciones = "Mantenimiento"
             }
@@ -91,7 +88,7 @@ Fecha = function (fecha, diaSemana) {
     }
 }
 
-generarFecha = function (dia) {
+let generarFecha = function (dia) {
     let listaDesplegableFecha = document.getElementById("fechas")
     let sum = null
     let semanaElegida = listaDesplegableFecha.options.selectedIndex
