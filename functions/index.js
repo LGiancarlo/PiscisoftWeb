@@ -19,7 +19,7 @@ app.get('/FuncionPruebaHBS',(request,response) =>{
 });
 exports.FuncionPruebaHBS = functions.https.onRequest(app);
 
-Fin
+//Fin
 
 //Función de autenticación //Función reemplazada por la autenticación en la creación de Cookies
 /*
