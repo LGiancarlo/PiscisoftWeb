@@ -16,3 +16,8 @@ function comprobarCredenciales() {
         MakeCookie()
     }
 }
+
+//A
+//B
+//C
+//d

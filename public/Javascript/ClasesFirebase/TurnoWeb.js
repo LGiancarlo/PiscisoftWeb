@@ -87,3 +87,13 @@ var TurnoWeb = function (dia, hora) {
 
     }
 }
+
+//A
+//b
+//C
+//D
+//E
+//F
+//G
+//H
+//I

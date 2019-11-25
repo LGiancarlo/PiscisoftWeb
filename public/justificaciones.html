@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="">
-  <link rel="stylesheet" href="./CSS/usuarios.css">
+  <link rel="stylesheet" href="./CSS/tablaHorarioYBoton.css">
   <link rel="stylesheet" href="./CSS/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,7 +30,7 @@
     }
     window.onload = Verify;
   </script>
-  <title>Usuarios</title>
+  <title>Justificaciones</title>
 </head>
 
 <body>
@@ -46,18 +46,17 @@
           <li class="nav-item">
             <a class="nav-link" href="./paginaPrincipal.html">Turnos Actuales</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./usuarios.html">Usuarios<span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item">
+            <a class="nav-link" href="./usuarios.html">Usuarios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./modificarHorario.html">Modificar horario</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./justificaciones.html">Justificaciones</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="./justificaciones.html">Justificaciones<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-danger" onclick=""> Salir </button>
+            <button class="btn btn-danger" onclick="EatCookie()"> Salir </button>
           </li>
         </ul>
       </div>
@@ -70,37 +69,21 @@
   <br>
   <br>
   <div class="container">
-    <div class="control-group" id="cab_filtrado">
-      <label class="control-label">Buscar alumno por código:</label>
-      <input type="text" id="texto" placeholder="" class="input-xlarge" onkeyup="buscarTiempoReal()">
-      <button id="verListado "class="btn btn-primary float-right btn-lg  mx-1" onclick="generarPaginacion()"> Ver listado </button>
-      <button id="actualizarAsistencia" class="btn btn-secondary float-right btn-lg mx-1" onclick="actualizarAsistencia()" > Actualizar asistencia </button>
-      <br>
-      <br>
-    </div>
-    <div class="control-group" style="cursor: pointer">
-      <div class="d-flex justify-content-center" id="paginador"></div>
-    </div>
-    <table class="table table-bordered my-3" style="text-align:center " id="tablaUsuarios">
+    <table class="table table-bordered my-3" style="text-align:center; width: 80%; margin: 0px auto;">
+      <thead>
+        <tr>
+          <th scope="col" class="primeraFila">Fecha de envio</th>
+          <th scope="col" class="primeraFila">Información</th>
+          <th scope="col" class="primeraFila">Cant. Inasistencias</th>
+          <th scope="col" class="primeraFila">Justificación</th>
+        </tr>
+      </thead>
+      <!-- Se genera la tabla -->
+      <tbody id="tablaJustificacion">
+        <tr>
 
-      <tr>
-        <th scope="col" class="primeraFila">Código</th>
-        <th scope="col" class="primeraFila">Foto</th>
-        <th scope="col" class="primeraFila">Nombre Completo</th>
-        <th scope="col" class="primeraFila">Teléfono</th>
-        <th scope="col" class="primeraFila">Observación</th>
-        <th scope="col" class="primeraFila">Ver detalles</th>
-      </tr>
-
-      <tr>
-        <th scope='row' class='celdaInicial'>20169999</th>
-        <td class='imagenInicial'><img src='./imagenes/foto_en_blanco.png' width=109 height=123 alt="Foto usuario"></td>
-        <td class='celdaInicial'>Nombre Completo</td>
-        <td class='celdaInicial'>Teléfono</td>
-        <td class='celdaInicial'>Observación</td>
-        <td class='celdaInicial'><button class="btn btn-default botonInicial"> Ver detalle</button>
-        </td>
-      </tr>
+        </tr>
+        </thead>
     </table>
   </div>
   <br>
@@ -109,22 +92,28 @@
   <br>
   <br>
   <br>
-  <div class="container">
-    <div class="modal fade" id="ventanaActualizado" role="dialog">
-            <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                            <div class="modal-header">
-                                    <h4 class="modal-title">Información</h4>
-                                    <button type="button" class="close"
-                                            data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                              <p id="mensajeActualizar"></p>
-                          </div>
-                    </div>
+
+  <div class="container ">
+    <footer class="footer-bs">
+      <div class="row">
+        <div class="col-md-6 footer-brand animated fadeInLeft">
+          <br>
+          <p>Av. Las Palmas 179 Urb. Mayorazgo</p>
+          <p>Distrito de Ate</p>
+          <p>Lima,Perú</p>
+          <p>© 2019 PisciSoft. Todos los derechos reservados</p>
+        </div>
+        <div class="col-md-6 footer-social animated fadeInRight ">
+          <ul>
+            <div class="card-header mx-auto ">
+              <span> <img src=".//imagenes//Logo%20en%20blanco.png" class="w-75" alt="Logo" style="float:right">
+              </span><br />
             </div>
-    </div>
-</div>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -139,9 +128,7 @@
   <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-storage.js"></script>
   <script type="text/javascript" src="./Javascript/ConexionFirebase/conexion.js"></script>
-  <script type="text/javascript" src="./Javascript/Objetos/paginador.js"></script>
-  <script type="text/javascript" src="./Javascript/Formatos/tablaUsuarios.js"></script>
-  <script type="text/javascript" src="./Javascript/usuarios.js"></script>
+  <script type="text/javascript" src="./Javascript/justificaciones.js"></script>
 </body>
 
 </html>
