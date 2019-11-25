@@ -49,7 +49,7 @@ exports.FuncionGuardarEnBase = functions.https.onRequest((req,res) => {
         res.send('Hubo un error');
     })
 });
-FIN
+//FIN
 
 
 //Para probar logica de firestore
