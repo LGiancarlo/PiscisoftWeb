@@ -13,7 +13,6 @@ db.collection("turno").where(firebase.firestore.FieldPath.documentId(), ">=", fe
     querySnapshot.forEach(function(doc) {
         let casilla = document.getElementById(`${doc.data().dia}-${doc.data().horaInicio}`)
         if(doc.data().estado == "Caducado"){
-            console.log("aaaaaaaaaaaaaaaaaa")
             casilla.setAttribute("bgcolor", "#919393")
         }
         else if(doc.data().capacidadCubierta == doc.data().capacidadTotal){
@@ -31,6 +30,3 @@ db.collection("turno").where(firebase.firestore.FieldPath.documentId(), ">=", fe
         }
     });
 });
-
-
-//Cambiooooooooooooooooooooooooooooo
