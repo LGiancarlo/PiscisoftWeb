@@ -49,5 +49,11 @@ function actualizarAsistencia() {
 
 }
 
+let boton = document.getElementById("botonEjecutar")
+
+
+
+
+
 
 TablaUsuario()
