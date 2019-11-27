@@ -21,13 +21,12 @@ function mostrarTurno() {
 
 function mostrarUsuarios() {
     db.collection("reserva").where("codTurno", "==", `${fecha.generarFormatoFechaBD()}.${identificacionFecha.hora}`).onSnapshot((querySnapshot) => {
-        tablaUsuarios.innerHTML =""
+        tablaUsuarios.innerHTML = ""
         querySnapshot.forEach((reserva) => {
-            console.log("h")
             db.collection("usuario").doc(`${reserva.data().codUsuario}`).get().then(
                 usuario => {
-                    
-                    tablaUsuarios.innerHTML += `<tr> 
+                    if (reserva.data().estado != "Cancelada") {
+                        tablaUsuarios.innerHTML += `<tr> 
                             <td valign="middle" style='vertical-align:middle' ><img src='${ usuario.data().foto}' width=109 height=123></td> 
                             <td style='vertical-align:middle'>Codigo: ${ usuario.id}<br> 
                                                                       ${ usuario.data().nombre}<br> 
@@ -35,7 +34,9 @@ function mostrarUsuarios() {
                             </td> 
                             <td style='vertical-align:middle'>${ reserva.data().estado}</td>
                             
-                            </tr>`})
+                            </tr>`}
+                })
+
         });
     });
 }
