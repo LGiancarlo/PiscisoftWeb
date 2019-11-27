@@ -72,9 +72,13 @@
   <div class="container">
     <div class="control-group" id="cab_filtrado">
       <label class="control-label">Buscar alumno por código:</label>
+      <button id="exportarData " class="btn btn-success float-right btn-lg  mx-1" data-toggle="modal"
+        data-target="#ventanaExportar"> Exportar data </button>
       <input type="text" id="texto" placeholder="" class="input-xlarge" onkeyup="buscarTiempoReal()">
-      <button id="verListado "class="btn btn-primary float-right btn-lg  mx-1" onclick="generarPaginacion()"> Ver listado </button>
-      <button id="actualizarAsistencia" class="btn btn-secondary float-right btn-lg mx-1" onclick="actualizarAsistencia()" > Actualizar asistencia </button>
+      <button id="verListado " class="btn btn-primary float-right btn-lg  mx-1" onclick="generarPaginacion()"> Ver
+        listado </button>
+      <button id="actualizarAsistencia" class="btn btn-secondary float-right btn-lg mx-1"
+        onclick="actualizarAsistencia()"> Actualizar asistencia </button>
       <br>
       <br>
     </div>
@@ -111,20 +115,65 @@
   <br>
   <div class="container">
     <div class="modal fade" id="ventanaActualizado" role="dialog">
-            <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                            <div class="modal-header">
-                                    <h4 class="modal-title">Información</h4>
-                                    <button type="button" class="close"
-                                            data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                              <p id="mensajeActualizar"></p>
-                          </div>
-                    </div>
-            </div>
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Información</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p id="mensajeActualizar"></p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+
+  <div class="modal" id="ventanaExportar">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="tituloPop">Seleccionar categoria</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="https://us-central1-piscisoft.cloudfunctions.net/ExportarData" target="_blank">
+            <div class="checkbox">
+              <label><input type="checkbox" value="Alumno" id="checkBoxAlumno" name="checkBoxAlumno">Alumno</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="Trabajador" id="checkBoxTrabajador" name="checkBoxTrabajador">
+                Trabajador</label>
+            </div>
+            <div class="checkbox ">
+              <label><input type="checkbox" value="Egresado" id="checkBoxEgresado"
+                  name="checkBoxEgresado">Egresado</label>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success" style="background: #FC663D; margin: 0 auto"
+                id="botonEjecutar">
+                Ejecutar </button>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
