@@ -103,7 +103,7 @@ exports.ExportarData = functions.https.onRequest((req, res) => {
         arreglo.push(valTrabajador)
     }
     if (arreglo.length==0){
-        res.send("No ingreso nada")
+        res.send("No se selecciono una categoria, regrese a la ventana anterior y seleccione una")
     }
     let datos = "[";
     for (let i = 0; i < arreglo.length; i++) {
