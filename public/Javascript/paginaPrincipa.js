@@ -30,4 +30,4 @@ db.collection("turno").where(firebase.firestore.FieldPath.documentId(), ">=", fe
 });
 
 
-//Prueba de despliegue continuo
+//Prueba de despliegue continuo2
