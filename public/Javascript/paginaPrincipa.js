@@ -25,8 +25,6 @@ db.collection("turno").where(firebase.firestore.FieldPath.documentId(), ">=", fe
         }
         else if(doc.data().estado == "Abierto"){
             casilla.setAttribute("bgcolor", "#FFFFFF")
-            casilla.setAttribute("onclick", "")
-            casilla.style.cursor = "auto";
         }
     });
 });
