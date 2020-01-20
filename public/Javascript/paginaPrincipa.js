@@ -12,19 +12,22 @@ semanaActual.innerHTML = `Semana: ${fechaInicio.generarFormatoFechaOriginal()} h
 db.collection("turno").where(firebase.firestore.FieldPath.documentId(), ">=", fechaInicio.generarFormatoFechaBD()).where(firebase.firestore.FieldPath.documentId(), "<=", fechaFin.generarFormatoFechaBD()).onSnapshot((querySnapshot) => {
     querySnapshot.forEach(function(doc) {
         let casilla = document.getElementById(`${doc.data().dia}-${doc.data().horaInicio}`)
-        if(doc.data().capacidadCubierta == doc.data().capacidadTotal){
-            casilla.setAttribute("bgcolor", "#52ea3b")
+        if(doc.data().estado == "Caducado"){
+            casilla.setAttribute("bgcolor", "#919393")
         }
-        else if(doc.data().estado == "Abierto"){
-            casilla.setAttribute("bgcolor", "#0000FF")
+        else if(doc.data().capacidadCubierta == doc.data().capacidadTotal){
+            casilla.setAttribute("bgcolor", "#D2A0F5")
         }
         else if(doc.data().estado == "Cerrado"){
             casilla.setAttribute("bgcolor", "#FF0000")
             casilla.setAttribute("onclick", "")
             casilla.style.cursor = "auto";
         }
-        else if(doc.data().estado == "Caducado"){
-            casilla.setAttribute("bgcolor", "#9c9c9c")
+        else if(doc.data().estado == "Abierto"){
+            casilla.setAttribute("bgcolor", "#FFFFFF")
         }
     });
 });
+
+
+//Prueba de despliegue continuo2
